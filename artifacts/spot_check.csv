@@ -1,0 +1,26 @@
+question,answer,pages,human_verdict
+How does the NRW method determine the effective parameters of the 3D-MTMSRR unit cell when it is placed inside a waveguide with perfect electric and magnetic field boundaries along the x- and y-axes?,"The NRW method extracts the effective parameters by first computing the electric fields in the three sections of the waveguide (EI, EII, EIII) using the measured or simulated S‑parameters.  
+For a unit cell placed inside the waveguide, the electric field in each section is expressed as a sum of forward and backward travelling waves:
+
+\[
+\begin{aligned}
+E_{\text{I}} &= e^{-\gamma_0 h_1} + B_1 e^{\gamma_0 h_1} \quad (8)\\
+E_{\text{II}} &= B_2 e^{-\gamma (h_1+h+h')} + B_3 e^{\gamma (h_1+h+h')} \quad (9)\\
+E_{\text{III}} &= B_4 e^{-\gamma_0 (h+h'+h_2)} \quad (10)
+\end{aligned}
+\]
+
+where \(\gamma = j\sqrt{(\omega/c)^2-(2\pi/\lambda_c)^2}\) is the propagation constant in the unit‑cell medium and \(\gamma_0 = j\sqrt{(\omega\mu_r\varepsilon_r/c)^2-(2\pi/\lambda_c)^2}\) is the propagation constant in air.  
+The perfect electric and magnetic field boundaries along the \(x\)- and \(y\)-axes enforce that the transverse fields satisfy the waveguide mode conditions, allowing the above expressions to be solved for the reflection and transmission coefficients. From these coefficients the effective permittivity \(\varepsilon_{\text{eff}}\) and permeability \(\mu_{\text{eff}}\) of the 3D‑MTMSRR unit cell are retrieved.  
+
+Thus, the NRW method determines the effective parameters by integrating the reflected and transmitted electric fields in the three waveguide sections, using the propagation constants that account for the waveguide boundaries. [1]","[('paper3', 6), ('paper3', 5), ('paper3', 6)]",
+How does adding a 3D-MTM superstrate to a 2 × 2 microstrip patch antenna array increase its gain by approximately 3.2 dBi and reduce the half‑power beamwidth by about 12.85°?,"Adding the 3D‑MTM superstrate improves the antenna’s radiation characteristics in two complementary ways:
+
+1. **Gain increase (~3.2 dBi)** – The high‑refractive‑index 3D‑MTM superstrate acts as an insulating layer that reflects surface waves back toward the radiating elements. This reflection enhances the effective aperture of the array, raising the simulated and measured co‑polar gain from about 6.5 dBi to 9.7 dBi (≈ 3.2 dBi increase) at 2.45 GHz [2]. The improved radiation efficiency (≈ 80 %) also contributes to the higher gain.
+
+2. **Half‑power beamwidth reduction (~12.85°)** – By suppressing surface‑wave losses and concentrating the radiated energy, the superstrate narrows the main lobe. The measured HPBW decreases from roughly 25.7° to 12.85° (a reduction of about 12.85°) when the superstrate is added, as shown in the comparison of the 2 × 2 array antenna with and without the 3D‑MTM superstrate [2].
+
+Thus, the superstrate’s reflective, high‑index properties both boost the effective aperture (raising gain) and focus the radiation pattern (narrowing the beamwidth).","[('paper4', 7), ('paper4', 8), ('paper4', 7)]",
+How does positioning the FIN-DGS in the H‑plane of a square microstrip patch array suppress the cross‑polarization radiation pattern and improve the CP‑XP ratio across a wide angular range?,"The FIN‑DGS is etched from the ground plane **in the H‑plane direction between two contiguous elements in a symmetric manner**.  
+Because it follows the radiating‑element contour path, it **suppresses the fields near the non‑resonating region** without interrupting the primary radiating region, thereby reducing the orthogonal (TM02) fields that produce cross‑polarisation (XP) [2].  
+This configuration **effectively suppresses the XP radiation pattern** and leaves the co‑polarisation (CP) radiation largely unchanged, yielding **< 35 dB XP (±50°) around boresight** and a **10.7 dBi gain**. The suppression is maintained over a wide angular range, improving the CP‑XP ratio across the entire elevation range of the array [1], [3].","[('paper1', 14), ('paper1', 3), ('paper1', 2)]",
